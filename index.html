@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de CPF</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/variable.css">
+    <link rel="stylesheet" href="src/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+    <div class="decoration blob-1"></div>
+    <div class="decoration blob-2"></div>
+
+    <main class="card">
+        <div class="icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.744c0 5.548 4.07 10.24 9 11.134 4.93-.894 9-5.586 9-11.134 0-1.308-.21-2.565-.598-3.744A11.959 11.959 0 0112 2.714z" />
+            </svg>
+        </div>
+
+        <h1>Validador de CPF</h1>
+        <p class="subtitle">Verifique a validade do documento de forma rápida e segura.</p>
+
+        <div class="input-wrapper">
+            <input type="text" id="cpf-input" placeholder="000.000.000-00" maxlength="14">
+        </div>
+
+        <button id="validate-btn">Validar Documento</button>
+
+        <div id="result-message"></div>
+
+        <span id="result">resultado aqui</span>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
