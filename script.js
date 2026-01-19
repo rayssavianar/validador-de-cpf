@@ -24,3 +24,49 @@ cpf.addEventListener("input", () => {
     }   
 });
 
+const span = document.getElementById('result');
+
+button.addEventListener('click',
+
+    function limparCpf() {
+        let cpfValue = cpf.value
+        let value = cpfValue.trim()
+        value = value.replace(/[^0-9]/g, '')
+
+        console.log(`Seu cpf é ${value}`);
+
+        function validarCpf() {
+
+            let soma = 0
+
+            for (let i = 0; i <= 8; i++) {
+
+                let digito = value[i]
+                let digitoNum = Number(digito)
+
+                let peso = 10 - i
+
+                let mult = digitoNum * peso
+
+                soma += mult
+
+
+                console.log(`soma: ${soma}`)
+            }
+
+            let resto = soma % 11
+            let resultado = 11 - resto
+            let digito1 = value[9]
+            let digitoDoCpf = Number(digito1)
+            let digitoCalculado = resultado >= 10 ? 0 : resultado
+
+            if (digitoCalculado === digitoDoCpf) {
+                console.log(`primeiro digito ok: ${digitoCalculado}`)
+            } else {
+                console.log("cpf inválido")
+                span.innerText = "CPF Inválido"
+                span.style.color = "red"
+                return;
+            }
+
+
